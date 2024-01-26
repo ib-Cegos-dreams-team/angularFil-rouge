@@ -1,3 +1,34 @@
+.banner {
+    position: relative;
+}
+
 .banner-image {
+    filter: brightness(60%);
     width: 100%;
+}
+
+.search-bar-container {
+    position: absolute;
+    top: 40%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    font-size: 16px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 25px;
+    transform: translateY(-50%);
+    color: black;
 }
