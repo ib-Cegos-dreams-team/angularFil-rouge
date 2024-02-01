@@ -1,3 +1,17 @@
-.listCard[_ngcontent-ng-c2238258301] {
+.carousel {
+    margin: 0 5rem;
+}
+
+.listCard {
     justify-content: center;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    background: black;
+    width: 6%;
+    opacity: 0.08;
+}
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    opacity: 0.2;
 }
