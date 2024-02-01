@@ -6,52 +6,76 @@
     <title>IT Training</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <div class="logo-container">
-            <img class="logo" src="../../../assets/images/logo.png" alt="logo" />
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarColor04"
-          aria-controls="navbarColor04"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor04">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#"
-                >Home
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Formations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Financement</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nous contacter</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-sm-2"
-              type="search"
-              placeholder="Search"
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <div class="logo-container">
+            <img
+              class="logo"
+              src="../../../assets/images/logo.png"
+              alt="logo"
             />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-              Rechercher
-            </button>
-          </form>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor04"
+            aria-controls="navbarColor04"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor04">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#"
+                  >Accueil
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Formations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Financement</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fa-regular fa-envelope"></i>Nous contacter</a
+                >
+              </li>
+            </ul>
+            <div class="customer-zone" (click)="toggleDropdown($event)">
+              <a class="customer-zone-link" href="#"
+                ><i class="fas fa-user"></i>Espace client</a
+              >
+              <div class="dropdown" *ngIf="isDropdownOpen">
+                <div class="dropdown-item">
+                  <label for="username">Identifiez-vous:</label>
+                  <input type="text" id="username" name="username" />
+                </div>
+                <div class="dropdown-item">
+                  <label for="password">Mot de passe:</label>
+                  <input type="password" id="password" name="password" />
+                </div>
+                <button>Connecter</button>
+                <p>Mot de passe oublié</p>
+                <p>Créer un compte</p>
+              </div>
+            </div>
+            <form class="d-flex search-bar">
+              <input
+                class="form-control me-sm-2"
+                type="search"
+                placeholder="Search"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   </body>
 </html>

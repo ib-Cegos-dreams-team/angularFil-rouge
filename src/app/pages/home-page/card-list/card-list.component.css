@@ -2,10 +2,6 @@
     margin: 0 5rem;
 }
 
-.listCard {
-    justify-content: center;
-}
-
 .carousel-control-next, .carousel-control-prev {
     background: black;
     width: 6%;
