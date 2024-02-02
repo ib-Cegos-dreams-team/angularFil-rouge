@@ -9,10 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  isDropdownOpen = false;
-
-  toggleDropdown(event: Event) {
-    event.preventDefault();
-    this.isDropdownOpen = !this.isDropdownOpen;
-  }
+  
 }
