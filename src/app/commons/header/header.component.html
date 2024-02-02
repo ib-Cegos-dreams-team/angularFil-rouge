@@ -47,11 +47,9 @@
                 >
               </li>
             </ul>
-            <div class="customer-zone" (click)="toggleDropdown($event)">
-              <a class="customer-zone-link" href="#"
-                ><i class="fas fa-user"></i>Espace client</a
-              >
-              <div class="dropdown" *ngIf="isDropdownOpen">
+            <div class="customer-zone" >
+              <a class="customer-zone-link"><i class="fas fa-user"></i>Espace client</a>
+              <div class="dropdown">
                 <div class="dropdown-item">
                   <label for="username">Identifiez-vous:</label>
                   <input type="text" id="username" name="username" />
@@ -62,8 +60,8 @@
                 </div>
                 <div class="connect-area">
                   <button class="btn btn-connect">Connecter</button>
-                  <p>Mot de passe oublié</p>
-                  <p>Créer un compte</p>
+                  <a>Mot de passe oublié</a>
+                  <a>Créer un compte</a>
                 </div>
               </div>
             </div>
@@ -71,7 +69,7 @@
               <input
                 class="form-control me-sm-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Mots clés..."
               />
               <i class="fa-solid fa-magnifying-glass"></i>
             </form>
