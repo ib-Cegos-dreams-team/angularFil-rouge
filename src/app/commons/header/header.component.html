@@ -40,15 +40,31 @@
               <a class="nav-link" href="#">Nous contacter</a>
             </li>
           </ul>
-          <form class="d-flex">
+          <div class="customer-zone" >
+            <a class="customer-zone-link"><i class="fas fa-user"></i>Espace client</a>
+            <div class="dropdown">
+              <div class="dropdown-item">
+                <label for="username">Identifiez-vous:</label>
+                <input type="text" id="username" name="username" />
+              </div>
+              <div class="dropdown-item">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" />
+              </div>
+              <div class="connect-area">
+                <button class="btn btn-connect">Connecter</button>
+                <a>Mot de passe oublié</a>
+                <a>Créer un compte</a>
+              </div>
+            </div>
+          </div>
+          <form class="d-flex search-bar">
             <input
               class="form-control me-sm-2"
               type="search"
-              placeholder="Search"
+              placeholder="Mots clés..."
             />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-              Rechercher
-            </button>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </form>
         </div>
       </div>
