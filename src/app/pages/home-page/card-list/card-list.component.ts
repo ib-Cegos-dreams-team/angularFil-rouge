@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardComponent } from "../card/card.component";
 
 @Component({
@@ -9,5 +9,10 @@ import { CardComponent } from "../card/card.component";
     imports: [CardComponent]
 })
 export class CardListComponent {
-
+    @Input()
+    sectionId: string = '';
+    @Input()
+    sectionClass: string = '';
+    @Input()
+    sectionTitle: string = 'Default title';
 }

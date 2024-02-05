@@ -1,0 +1,75 @@
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <label>
+      Civilité:
+      <input
+        type="radio"
+        name="gender"
+        value="M"
+        [(ngModel)]="user.gender"
+        required
+      />
+      M
+      <input
+        type="radio"
+        name="gender"
+        value="MME"
+        [(ngModel)]="user.gender"
+        required
+      />
+      MME
+    </label>
+
+    <label>
+      Prénom:
+      <input
+        type="text"
+        name="firstName"
+        [(ngModel)]="user.firstName"
+        required
+      />
+    </label>
+
+    <label>
+      Nom:
+      <input type="text" name="lastName" [(ngModel)]="user.lastName" required />
+    </label>
+
+    <label>
+      Téléphone:
+      <input type="tel" name="phone" [(ngModel)]="user.phone" required />
+    </label>
+
+    <label>
+      Adresse:
+      <input type="text" name="address" [(ngModel)]="user.address" required />
+    </label>
+
+    <label>
+      Email:
+      <input type="email" name="email" [(ngModel)]="user.email" required />
+    </label>
+
+    <label>
+      Mot de passe:
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="user.password"
+        required
+      />
+    </label>
+
+    <label>
+      Confirmer mot de passe:
+      <input
+        type="password"
+        name="confirmPassword"
+        [(ngModel)]="user.confirmPassword"
+        required
+      />
+    </label>
+
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+  </form>
+</div>
