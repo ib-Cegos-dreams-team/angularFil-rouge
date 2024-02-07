@@ -1,14 +1,19 @@
 <div class="form-container">
-  <form [formGroup]="user" (ngSubmit)="onSubmit()" >
-    <h6>Civilité:</h6>
-    <div>
-      <input type="radio" name="gender" value="M" formControlName="gender" required />
-      <label for="">M</label>
-      <input type="radio" name="gender" value="MME" formControlName="gender" required />
-      <label for="MME" class="">MME</label>
+  <form [formGroup]="user" (ngSubmit)="onSubmit()">
+    <h5>Civilité :</h5>
+    <div class="row">
+      <div class="col-2">
+        <div class="d-flex justify-content-around">
+          <input type="radio" name="gender" value="M" formControlName="gender" required />
+          <label for="gender">M</label>
+          <input type="radio" name="gender" value="MME" formControlName="gender" required />
+          <label for="gender" class="">MME</label>
+        </div>
+      </div>
     </div>
 
-      <label for="firstName">Prénom:</label>
+
+    <label for="firstName">Prénom:</label>
     <input type="text" name="firstName" id="firstName" formControlName="firstName" required />
 
     <label for="lastName">Nom:</label>
@@ -30,11 +35,13 @@
     <label for="confirmPassword">Confirmer mot de passe:</label>
     <input type="password" name="confirmPassword" id="confirmPassword" formControlName="confirmPassword" required />
 
-    <div class="error-message text-danger text-center" *ngIf ="user.errors?.['PasswordNoMatch']"> 
-      Le mot de passe ne correspond pas. 
-    </div> 
+    <div class="error-message text-danger text-center" *ngIf="user.errors?.['PasswordNoMatch']">
+      Le mot de passe ne correspond pas.
+    </div>
 
     <button type="submit" [disabled]="user.invalid">Submit</button>
+    
     <p>{{ user.value | json }}</p>
   </form>
+  
 </div>
