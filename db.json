@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "philippe",
+      "lastName": "Lamorski",
+      "phone": "000000",
+      "address": "efsdfsdgfsdfg",
+      "email": "fdfgdfgfd",
+      "password": "aaaaa",
+      "confirmPassword": "aaaaa"
+    },
+    {
+      "id": "3441",
+      "gender": "M",
+      "firstName": "philippe",
+      "lastName": "lamorski",
+      "phone": "0659613785",
+      "address": "29 residence la roseraie",
+      "email": "lamorski.philippe@bbox.fr",
+      "password": "aaaaa",
+      "confirmPassword": "aaaaa"
+    },
+    {
+      "id": "7bc9",
+      "gender": "M",
+      "firstName": "philippe",
+      "lastName": "lamorski",
+      "phone": "0659613785",
+      "address": "29 residence la roseraie",
+      "email": "lamorski.philippe@bbox.fr",
+      "password": "aaaaa",
+      "confirmPassword": "aaaaa"
+    },
+    {
+      "id": "d947",
+      "gender": "M",
+      "firstName": "philippe",
+      "lastName": "lamorski",
+      "phone": "0659613785",
+      "address": "29 residence la roseraie",
+      "email": "parshimipopeli@sfr.fr",
+      "password": "eeeee",
+      "confirmPassword": "eeeee"
+    }
+  ]
+}
