@@ -7,7 +7,23 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Creer un compte</h2>
 
+
               <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-outline mb4">
+                  <label class="form-label" for="form3Example7cg">
+                    Civilite
+                  </label>
+                  <input type="radio"
+                  formControlName="civilite"
+                  value="MONSIEUR"
+                  > M
+                  <input type="radio"
+                  formControlName="civilite"
+                  value="MADAME"> MME
+                </div>
+
+
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1cg"
                     >Prenom</label
