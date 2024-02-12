@@ -60,6 +60,10 @@ a {
     position: relative;
 }
 
+.customer-zone-link:hover {
+    cursor: pointer;
+}
+
 .connect-area {
     display: flex;
     flex-direction: column;
