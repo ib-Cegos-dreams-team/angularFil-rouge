@@ -14,6 +14,7 @@ export class CreationCompteComponent {
   constructor(private authService: AuthService){}
   
   registerForm = new FormGroup({
+    civilite: new FormControl("", [Validators.required]),
     prenom: new FormControl("", [Validators.required]),
     nom: new FormControl("", [Validators.required]),    
     email: new FormControl("", [Validators.required, Validators.email]),
