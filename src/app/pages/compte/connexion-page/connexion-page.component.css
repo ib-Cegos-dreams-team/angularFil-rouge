@@ -1,6 +1,6 @@
 a {
     color: black;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .idPage{
@@ -12,7 +12,47 @@ a {
     background: linear-gradient(90deg, rgba(41,19,186,1) 0%, rgba(194,57,152,1) 100%);
     height: 450px;
     position: relative;
+    overflow: hidden;
+    background-position: 100% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+.connection-wrap {
+    margin-top: -250px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.choice-container{
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 20%;
+    height: 45px;
+}
+
+.choice-container a {
+    display: flex;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice-container a.active {
+    color: black;
+    background-color: white;
+}
+
+
 
 form {
     width: 80%;
@@ -21,9 +61,6 @@ form {
 
 .form-container {
     background: white;
-    position: absolute;
-    top: 35%;
-    left: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
