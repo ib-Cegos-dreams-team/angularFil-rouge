@@ -1,40 +1,7 @@
-/* FILEPATH: /c:/Users/IB/Documents/Angular/fil_rouge/src/app/pages/compte/creation-compte/creation-compte.component.css */
-
 .form-container {
-    max-width: 60%;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
+    margin: 5rem 0;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 10px;
-}
-
-input {
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-button {
-    padding: 10px 20px;
-    background: rgb(41, 19, 186);
-    background: linear-gradient(90deg, rgba(41, 19, 186, 1) 0%, rgba(194, 57, 152, 1) 100%);
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+.btn {
+    width: 100%;
 }
