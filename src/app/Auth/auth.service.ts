@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:8080/utilisateurs'
+  private apiUrl = 'http://localhost:8080/auth'
 
   constructor(public http: HttpClient) { }
 
   enregistrer(user:any):Observable<any>{
-    return this.http.post<any>(`${this.apiUrl}/save`, user)
+    return this.http.post<any>(`${this.apiUrl}/signup`, user)
   }
 
 
