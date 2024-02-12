@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../Auth/auth.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-connexion-page',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, RouterLink],
   templateUrl: './connexion-page.component.html',
   styleUrl: './connexion-page.component.css'
 })

@@ -3,7 +3,7 @@
     <div class="connection-wrap">
         <div class="choice-container">
             <a class="active">Se connecter</a>
-            <a>S'enregistrer</a>
+            <a routerLink="creation-compte">S'enregistrer</a>
         </div>
         <div class="form-container">
             <form [formGroup]="connexionForm" (ngSubmit)="onSubmit()">

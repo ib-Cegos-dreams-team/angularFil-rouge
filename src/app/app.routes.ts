@@ -11,7 +11,7 @@ import { ConnexionPageComponent } from './pages/compte/connexion-page/connexion-
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomePageComponent },
-    { path: 'creation-compte', component: CreationCompteComponent},
+    { path: 'identification/creation-compte', component: CreationCompteComponent},
     { path: 'identification', component: ConnexionPageComponent},
     { path: 'formations', component: FormationsPageComponent },
     { path: 'nous-contacter', component: ContactComponent},
