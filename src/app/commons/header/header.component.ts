@@ -15,10 +15,17 @@ export class HeaderComponent {
 
   constructor(private auth: AuthService) { }
 
+
+
   connexionForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
   })
+
+  showForm(){
+    const form = document.querySelector('.dropdown') as HTMLElement;
+    form.classList.toggle('form-hidden');
+  }
 
 
   onSubmit() {
@@ -29,5 +36,6 @@ export class HeaderComponent {
       }
     })
     this.connexionForm.reset();
+    this.showForm();
   }
 }

@@ -36,10 +36,10 @@
           </li>
         </ul>
         <div class="customer-zone">
-          <a class="customer-zone-link"
+          <a class="customer-zone-link" (click)="showForm()"
             ><i class="fas fa-user"></i>Espace client</a
           >
-          <form class="dropdown" [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
+          <form class="dropdown form-hidden" [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
             <div class="dropdown-item">
               <label for="email">Identifiez-vous:</label>
               <input type="text" id="email" name="email" formControlName="email" />
