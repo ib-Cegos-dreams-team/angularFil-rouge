@@ -39,21 +39,21 @@
           <a class="customer-zone-link"
             ><i class="fas fa-user"></i>Espace client</a
           >
-          <div class="dropdown">
+          <form class="dropdown" [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
             <div class="dropdown-item">
-              <label for="username">Identifiez-vous:</label>
-              <input type="text" id="username" name="username" />
+              <label for="email">Identifiez-vous:</label>
+              <input type="text" id="email" name="email" formControlName="email" />
             </div>
             <div class="dropdown-item">
               <label for="password">Mot de passe:</label>
-              <input type="password" id="password" name="password" />
+              <input type="password" id="password" name="password" formControlName="password" />
             </div>
             <div class="connect-area">
-              <button class="btn btn-connect">Connecter</button>
+              <button class="btn btn-connect">Se Connecter</button>
               <a>Mot de passe oublié</a>
               <a routerLink ="creation-compte">Créer un compte</a>
             </div>
-          </div>
+          </form>
         </div>
         <form class="d-flex search-bar">
           <input

@@ -15,5 +15,8 @@ export class AuthService {
     return this.http.post<any>(`${this.apiUrl}/signup`, user)
   }
 
+  connecter(user:any):Observable<any>{
+    return this.http.post<any>(`${this.apiUrl}/signin`, user)
+  }
 
 }
