@@ -94,3 +94,8 @@ form {
 input[type="radio"] {
     margin-right: 5px;
 }
+
+.separation {
+    height: 100vh;
+    margin: auto;
+}
