@@ -10,11 +10,11 @@ import { ConnexionPageComponent } from './pages/compte/connexion-page/connexion-
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'admin', pathMatch: 'full' },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomePageComponent },
     { path: 'admin', component: AdminPageComponent},
-    { path: 'identification/creation-compte', component: CreationCompteComponent},
     { path: 'identification', component: ConnexionPageComponent},
+    { path: 'identification/creation-compte', component: CreationCompteComponent},
     { path: 'formations', component: FormationsPageComponent },
     { path: 'nous-contacter', component: ContactComponent},
     { path: 'formations/formation-theme', component: FormationsThemeComponent },
