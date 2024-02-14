@@ -25,6 +25,8 @@ export class ConnexionPageComponent {
     console.log(this.connexionForm.value);
     this.auth.connecter(this.connexionForm.value).subscribe({
       next: (response) => {
+        localStorage.setItem("jwt", response.jwt);
+        this.auth.getUserProfile().subscribe();
         console.log("sign up success", response)
       }
     })
