@@ -45,4 +45,8 @@ export class FormationService {
   getListFormationByIdSousTheme(id: number): Observable<Formation[]>{
     return this.httpClient.get<Formation[]>(`${this.apiUrl}/findbysoustheme/${id}`);
   }
+
+  getBestFormations(): Observable<Formation[]>{
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/findbestformations`);
+  }
 }
