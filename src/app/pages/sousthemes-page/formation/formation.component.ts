@@ -1,17 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-formation',
   standalone: true,
-  imports: [],
+  imports: [RouterModule,CommonModule],
   templateUrl: './formation.component.html',
   styleUrl: './formation.component.css'
 })
 export class FormationComponent {
 
-  @Input()
+@Input()
 formation!: any;
-
-
 
 }

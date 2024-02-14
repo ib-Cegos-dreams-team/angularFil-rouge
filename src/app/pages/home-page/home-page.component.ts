@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { BannerComponent } from "./banner/banner.component";
 import { CardListComponent } from "./card-list/card-list.component";
@@ -7,8 +8,9 @@ import { CardListComponent } from "./card-list/card-list.component";
     standalone: true,
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.css',
-    imports: [BannerComponent, CardListComponent]
+    imports: [HttpClientModule,BannerComponent, CardListComponent],
 })
 export class HomePageComponent {
+
 
 }
