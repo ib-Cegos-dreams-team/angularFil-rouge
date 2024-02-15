@@ -8,11 +8,13 @@ import { FormationsPageComponent } from './pages/formations-page/formations-page
 import { ContactComponent } from './pages/contact/contact.component';
 import { ConnexionPageComponent } from './pages/compte/connexion-page/connexion-page.component';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
+import { AjouterUtilisateurComponent } from './pages/admin-page/ajouter-utilisateur/ajouter-utilisateur.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomePageComponent },
     { path: 'admin', component: AdminPageComponent},
+    { path: 'admin/ajouter-utilisateur', component: AjouterUtilisateurComponent},
     { path: 'identification', component: ConnexionPageComponent},
     { path: 'identification/creation-compte', component: CreationCompteComponent},
     { path: 'formations', component: FormationsPageComponent },

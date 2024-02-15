@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../../Auth/auth.service';
-import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-creation-compte',
+  selector: 'app-ajouter-utilisateur',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, RouterLink],
-  templateUrl: './creation-compte.component.html',
-  styleUrl: './creation-compte.component.css'
+  imports: [FormsModule, ReactiveFormsModule],
+  templateUrl: './ajouter-utilisateur.component.html',
+  styleUrl: './ajouter-utilisateur.component.css'
 })
-export class CreationCompteComponent {
+export class AjouterUtilisateurComponent {
 
   constructor(private authService: AuthService){}
   
@@ -32,5 +31,5 @@ export class CreationCompteComponent {
     })
     this.registerForm.reset();
     
-  }  
+  }
 }
