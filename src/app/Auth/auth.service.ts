@@ -37,8 +37,9 @@ export class AuthService {
     );
   }
 
-  deconnecter(){
-    localStorage.removeItem('token');
+  logOut(){
+    localStorage.removeItem('jwt');
+    localStorage.removeItem('role');
     this.authSubject.next({user:null});
   }
 
