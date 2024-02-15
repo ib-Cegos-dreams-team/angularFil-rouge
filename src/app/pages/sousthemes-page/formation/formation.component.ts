@@ -3,15 +3,15 @@ import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-formation',
   standalone: true,
   imports: [RouterModule,CommonModule],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  templateUrl: './formation.component.html',
+  styleUrl: './formation.component.css'
 })
-export class CardComponent {
+export class FormationComponent {
 
-  @Input()
-  formation !: any;
+@Input()
+formation!: any;
 
 }
