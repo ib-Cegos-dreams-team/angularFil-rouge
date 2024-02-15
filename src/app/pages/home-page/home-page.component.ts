@@ -9,7 +9,7 @@ import { FormationPersonnaliseeComponent } from "../../commons/formation-personn
     standalone: true,
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.css',
-    imports: [HttpClientModule,BannerComponent, CardListComponent],
+    imports: [HttpClientModule, BannerComponent, CardListComponent, FormationPersonnaliseeComponent]
 })
 export class HomePageComponent {
 

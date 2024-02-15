@@ -21,11 +21,6 @@ export class AuthService {
     return localStorage.getItem("jwt");
   }
 
-  
-  authSubject = new BehaviorSubject<any>({
-    user:null
-  });
-
   enregistrer(user:any):Observable<any>{
     return this.http.post<any>(`${this.apiUrl}/auth/signup`, user)
   }
