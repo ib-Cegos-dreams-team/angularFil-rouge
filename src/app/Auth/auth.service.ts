@@ -41,6 +41,7 @@ export class AuthService {
     localStorage.removeItem('jwt');
     localStorage.removeItem('role');
     this.authSubject.next({user:null});
+    this.router.navigate(['/']);
   }
 
   getUserProfile():Observable<any>{
