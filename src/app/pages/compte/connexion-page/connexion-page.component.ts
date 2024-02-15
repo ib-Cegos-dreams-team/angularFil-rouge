@@ -30,6 +30,6 @@ export class ConnexionPageComponent {
         console.log("sign up success", response)
       }
     })
-    this.connexionForm.reset();
+    this.auth.redirectToHome();
   }
 }
