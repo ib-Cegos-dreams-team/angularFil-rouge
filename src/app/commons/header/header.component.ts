@@ -25,7 +25,6 @@ export class HeaderComponent {
   ngOnInit(){
     this.auth.authSubject.subscribe(
       (auth) => {
-        console.log(auth);
         this.user = auth.user;
       }
     )

@@ -24,7 +24,6 @@ export class AppComponent {
   ngOnInit(){
     this.authService.authSubject.subscribe(
       (auth) => {
-        console.log(auth);
         this.user = auth.user;
       }
     )
