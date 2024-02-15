@@ -29,4 +29,12 @@ export class HeaderComponent {
       }
     )
   }
+
+  isLoggedIn(): boolean {
+    return  !!localStorage.getItem('jwt');
+  }
+  
+  logout() {
+    this.auth.logOut();
+  }
 }
