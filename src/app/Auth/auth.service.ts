@@ -31,6 +31,7 @@ export class AuthService {
       map((response: any) => { // Use 'any' type for flexibility
         localStorage.setItem('jwt', response.jwt);
         localStorage.setItem('role', response.role); // Extract role from JSON
+        console.log('role', response.role);
         return response; // Pass the full response through
       })
     );
@@ -60,7 +61,14 @@ export class AuthService {
   }
 
   redirectToHome() {
-    this.router.navigate(['/home']);
+    const role = localStorage.getItem('role');
+    if ( role === 'ADMIN'){
+      console.log('admin');
+      this.router.navigate(['/admin']);
+    } else {
+      console.log('user');
+      this.router.navigate(['/']);
+    }
   }
 
 }
