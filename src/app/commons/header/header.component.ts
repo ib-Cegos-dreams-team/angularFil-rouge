@@ -15,27 +15,19 @@ export class HeaderComponent {
 
   constructor(private auth: AuthService) { }
 
-
+  user:any = null;
 
   connexionForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
   })
 
-  showForm(){
-    const form = document.querySelector('.dropdown') as HTMLElement;
-    form.classList.toggle('form-hidden');
-  }
-
-
-  onSubmit() {
-    console.log(this.connexionForm.value);
-    this.auth.connecter(this.connexionForm.value).subscribe({
-      next:(response) => {
-        console.log("sign up success", response)
+  ngOnInit(){
+    this.auth.authSubject.subscribe(
+      (auth) => {
+        console.log(auth);
+        this.user = auth.user;
       }
-    })
-    this.connexionForm.reset();
-    this.showForm();
+    )
   }
 }
