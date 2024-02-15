@@ -20,6 +20,7 @@ export class AjouterUtilisateurComponent {
     email: new FormControl("", [Validators.required, Validators.email]),
     telephone: new FormControl("", [Validators.required]),
     password: new FormControl("", [Validators.required, Validators.minLength(6)]),
+    role: new FormControl("FORMATEUR", [Validators.required])
   })
 
   onSubmit() {

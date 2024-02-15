@@ -3,6 +3,8 @@
     <div class="connection-wrap">
       <div class="form-container">
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+
           <div class="form-outline mb-3 radio-form">
             <label class="form-label">
               Civilite
@@ -11,6 +13,14 @@
             <input type="radio" formControlName="civilite" value="MADAME"> MME
           </div>
   
+          <div class="form-outline mb-4">
+            <label class="form-label" for="role">Role:</label>
+            <select class="form-control" id="role" name="role" formControlName="role">
+              <option value="ADMIN">ADMIN</option>
+              <option value="UTILISATEUR">UTILISATEUR</option>
+              <option value="FORMATEUR">FORMATEUR</option>
+            </select>
+          </div>
   
           <div class="form-outline mb-4">
             <label class="form-label" for="prenom">Prenom:</label>
