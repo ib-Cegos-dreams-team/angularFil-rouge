@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { BannerComponent } from "./banner/banner.component";
 import { CardListComponent } from "./card-list/card-list.component";
+import { FormationPersonnaliseeComponent } from "../../commons/formation-personnalisee/formation-personnalisee.component";
 
 @Component({
     selector: 'app-home-page',
