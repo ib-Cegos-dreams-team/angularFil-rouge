@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, map, tap } from 'rxjs';
 
 
 @Injectable({
@@ -25,8 +25,14 @@ export class AuthService {
     return this.http.post<any>(`${this.apiUrl}/auth/signup`, user)
   }
 
-  connecter(user:any):Observable<any>{
-    return this.http.post<any>(`${this.apiUrl}/auth/signin`, user)
+  connecter(loginRequest: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/auth/signin`, loginRequest).pipe(
+      map((response: any) => { // Use 'any' type for flexibility
+        localStorage.setItem('jwt', response.jwt);
+        localStorage.setItem('role', response.role); // Extract role from JSON
+        return response; // Pass the full response through
+      })
+    );
   }
 
   deconnecter(){
@@ -44,6 +50,12 @@ export class AuthService {
         this.authSubject.next({...currentState, user})
       })
     )
+  }
+
+  getUserRole(): Observable<string> {
+    return this.getUserProfile().pipe(
+      map((user) => user.role),
+    );
   }
 
 }
