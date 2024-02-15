@@ -20,7 +20,7 @@ export const routes: Routes = [
     { path: 'formations', component: FormationsPageComponent },
     { path: 'nous-contacter', component: ContactComponent},
     { path: 'formations/formation-theme', component: FormationsThemeComponent },
-    { path: 'formations/formation-theme/formation-details', component: FormationDetailsComponent },
+    { path: 'formations/sousthemes/formation-details', component: FormationDetailsComponent },
     {path: 'formations/sousthemes', component: SousthemesPageComponent},
     { path: 'evaluation-formation', component: EvaluationFormationComponent },
     { path: '**', component: NotFoundComponent }

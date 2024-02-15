@@ -3,4 +3,5 @@ export default interface Formation {
     nom: string;
     description: string;
     prix: number;
+    duree: number;
 }
