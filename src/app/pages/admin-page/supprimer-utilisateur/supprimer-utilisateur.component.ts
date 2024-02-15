@@ -34,6 +34,18 @@ export class SupprimerUtilisateurComponent {
     }
   }
   
+  async deleteUser() {
+    try {
+      for (const user of this.selectedUsers) {
+        await this.utilisateurService.deleteUtilisateur(user.id).subscribe();
+      }
+      this.selectedUsers = [];
+      this.utilisateurs = this.utilisateurs.filter(u => !this.selectedUsers.map(selected => selected.id).includes(u.id));
+    } catch (error) {
+      console.error('Error deleting users:', error);
+    }
+  }
+  
   
 
 }

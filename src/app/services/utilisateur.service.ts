@@ -14,4 +14,8 @@ export class UtilisateurService {
   getUtilisateurs(): Observable<Utilisateur[]>{
     return this.http.get<Utilisateur[]>(`${this.apiUrl}/auth/utilisateurs`);
   }
+
+  deleteUtilisateur(id: number): Observable<any>{
+    return this.http.delete(`${this.apiUrl}/auth/utilisateurs/${id}`);
+  }
 }
