@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,11 +16,16 @@ export class AuthService {
 
   constructor(public http: HttpClient) { }
 
+
   getToken(): string | null {
     return localStorage.getItem("jwt");
   }
 
   
+  authSubject = new BehaviorSubject<any>({
+    user:null
+  });
+
   enregistrer(user:any):Observable<any>{
     return this.http.post<any>(`${this.apiUrl}/auth/signup`, user)
   }
