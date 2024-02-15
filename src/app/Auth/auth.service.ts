@@ -15,6 +15,11 @@ export class AuthService {
 
   constructor(public http: HttpClient) { }
 
+  getToken(): string | null {
+    return localStorage.getItem("jwt");
+  }
+
+  
   enregistrer(user:any):Observable<any>{
     return this.http.post<any>(`${this.apiUrl}/auth/signup`, user)
   }
