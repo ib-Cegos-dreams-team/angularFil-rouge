@@ -10,16 +10,13 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SousthemesPageComponent } from './pages/sousthemes-page/sousthemes-page.component';
 import { ConnexionPageComponent } from './pages/compte/connexion-page/connexion-page.component';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
-import { AjouterUtilisateurComponent } from './pages/admin-page/ajouter-utilisateur/ajouter-utilisateur.component';
-import { SupprimerUtilisateurComponent } from './pages/admin-page/supprimer-utilisateur/supprimer-utilisateur.component';
 import { AdminGuard } from './guard/admin.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomePageComponent },
     { path: 'admin', component: AdminPageComponent, canActivate: [AdminGuard]},
-    { path: 'admin/ajouter-utilisateur', component: AjouterUtilisateurComponent, canActivate: [AdminGuard]},
-    { path: 'admin/supprimer-utilisateur', component: SupprimerUtilisateurComponent, canActivate: [AdminGuard]},
+    { path: 'admin/...', component: AdminPageComponent, canActivate: [AdminGuard]},
     { path: 'identification', component: ConnexionPageComponent},
     { path: 'identification/creation-compte', component: CreationCompteComponent},
     { path: 'formations', component: FormationsPageComponent },

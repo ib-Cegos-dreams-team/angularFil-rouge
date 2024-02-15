@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, map, tap } from 'rxjs';
 
 
@@ -14,7 +15,7 @@ export class AuthService {
     user:null
   });
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient, private router:Router) { }
 
 
   getToken(): string | null {
@@ -56,6 +57,10 @@ export class AuthService {
     return this.getUserProfile().pipe(
       map((user) => user.role),
     );
+  }
+
+  redirectToHome() {
+    this.router.navigate(['/home']);
   }
 
 }
