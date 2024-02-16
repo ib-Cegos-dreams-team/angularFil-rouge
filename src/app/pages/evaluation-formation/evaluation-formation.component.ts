@@ -38,4 +38,7 @@ export class EvaluationFormationComponent {
     }
     this.evalForm.reset();
   }
+  resetNote() {
+    this.rating = 0;
+  }
 }
