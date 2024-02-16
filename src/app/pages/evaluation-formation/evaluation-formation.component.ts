@@ -5,8 +5,6 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons/faStar';
 
-
-
 @Component({
   selector: 'app-evaluation-formation',
   standalone: true,
@@ -37,7 +35,10 @@ export class EvaluationFormationComponent {
     if (this.evalForm.valid) {
       const data = this.evalForm.value;
       console.log( data);
-      this.evalForm.reset;
     }
+    this.evalForm.reset();
+  }
+  resetNote() {
+    this.rating = 0;
   }
 }
