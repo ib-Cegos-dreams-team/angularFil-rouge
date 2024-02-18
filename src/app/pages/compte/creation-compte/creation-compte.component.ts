@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../Auth/auth.service';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-creation-compte',
@@ -17,7 +17,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class CreationCompteComponent {
 
-  constructor(private authService: AuthService, private router:Router){}
+  constructor(private authService: AuthService){}
   
   registerForm = new FormGroup({
     civilite: new FormControl("", [Validators.required]),
@@ -28,18 +28,13 @@ export class CreationCompteComponent {
     password: new FormControl("", [Validators.required, Validators.minLength(6)]),
   })
 
-  showSuccessMessage() {
-    alert("Votre compte a été créé avec succès");
-  }
-
   onSubmit() {
     this.authService.enregistrer(this.registerForm.value).subscribe({
       next:(response) => {
-        this.showSuccessMessage();
+        console.log("sign up success", response)
       }
     })
     this.registerForm.reset();
-    this.router.navigate(['/identification']);
     
   }  
 }

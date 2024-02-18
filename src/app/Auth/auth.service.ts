@@ -23,7 +23,13 @@ export class AuthService {
   }
 
   enregistrer(user:any):Observable<any>{
-    return this.http.post<any>(`${this.apiUrl}/auth/signup`, user)
+    return this.http.post<any>(`${this.apiUrl}/auth/signup`, user).pipe(
+      catchError(error => {
+        // Handle error and display message
+        this.showErrorMessage('Erreur lors de l\'enregistrement');
+        return throwError(error);
+      })
+    )
   }
 
   connecter(loginRequest: any): Observable<any> {
