@@ -50,7 +50,7 @@ export class AuthService {
     localStorage.removeItem('jwt');
     localStorage.removeItem('role');
     this.authSubject.next({user:null});
-    this.router.navigate(['/']);
+    this.router.navigate(['/identification']);
   }
 
   getUserProfile():Observable<any>{
