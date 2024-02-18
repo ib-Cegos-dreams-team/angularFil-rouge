@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../Auth/auth.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-creation-compte',
@@ -17,7 +17,7 @@ import { RouterLink } from '@angular/router';
 })
 export class CreationCompteComponent {
 
-  constructor(private authService: AuthService){}
+  constructor(private authService: AuthService, private router:Router){}
   
   registerForm = new FormGroup({
     civilite: new FormControl("", [Validators.required]),
@@ -35,6 +35,7 @@ export class CreationCompteComponent {
       }
     })
     this.registerForm.reset();
+    this.router.navigate(['/identification']);
     
   }  
 }
