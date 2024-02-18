@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, map, tap } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, tap, throwError } from 'rxjs';
 
 
 @Injectable({
@@ -32,9 +32,19 @@ export class AuthService {
         localStorage.setItem('jwt', response.jwt);
         localStorage.setItem('role', response.role);
         return response;
+      }),
+      catchError(error => {
+        // Handle error and display message
+        this.showErrorMessage('Email ou mot de passe incorrect');
+        return throwError(error);
       })
     );
   }
+
+  showErrorMessage(message: string) {
+    alert(message);
+  }
+  
 
   logOut(){
     localStorage.removeItem('jwt');
