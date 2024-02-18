@@ -1,5 +1,16 @@
 .list {
-    height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    height: 80vh;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .best-card-list, .finance-card-list {
@@ -11,5 +22,11 @@
 }
 
 .unecarte {
-    width : 30% ;
+    width: 28%;
+    transition: transform 0.2s ease-in-out;
 }
+
+.unecarte:hover {
+    transform: scale(1.05);
+}
+
