@@ -1,0 +1,15 @@
+.list {
+    height: 100vh;
+}
+
+.best-card-list, .finance-card-list {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.unecarte {
+    width : 30% ;
+}
