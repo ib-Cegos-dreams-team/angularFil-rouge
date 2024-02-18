@@ -28,11 +28,10 @@ export class AuthService {
 
   connecter(loginRequest: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/auth/signin`, loginRequest).pipe(
-      map((response: any) => { // Use 'any' type for flexibility
+      map((response: any) => {
         localStorage.setItem('jwt', response.jwt);
-        localStorage.setItem('role', response.role); // Extract role from JSON
-        console.log('role', response.role);
-        return response; // Pass the full response through
+        localStorage.setItem('role', response.role);
+        return response;
       })
     );
   }
@@ -65,10 +64,8 @@ export class AuthService {
   redirectToHome() {
     const role = localStorage.getItem('role');
     if ( role === 'ADMIN'){
-      console.log('admin');
       this.router.navigate(['/admin']);
     } else {
-      console.log('user');
       this.router.navigate(['/']);
     }
   }
