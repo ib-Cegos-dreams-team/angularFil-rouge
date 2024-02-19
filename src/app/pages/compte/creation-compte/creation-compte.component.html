@@ -6,7 +6,7 @@
       <a class="active" routerLink="creation-compte">S'enregistrer</a>
     </div>
     <div class="form-container">
-      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
 
         <div class="form-outline mb-3 radio-form">
           <label class="form-label">

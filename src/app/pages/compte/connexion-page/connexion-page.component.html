@@ -6,7 +6,7 @@
             <a routerLink="creation-compte">S'enregistrer</a>
         </div>
         <div class="form-container">
-            <form [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="connexionForm" (ngSubmit)="onSubmit()" autocomplete="off">
                 <div class="form-outline mb-4">
                     <label class="form-label" for="email">Email:</label>
                     <input class="form-control" type="text" id="email" name="email" formControlName="email" />
