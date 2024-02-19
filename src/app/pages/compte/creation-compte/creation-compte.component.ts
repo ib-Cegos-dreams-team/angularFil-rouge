@@ -29,9 +29,12 @@ export class CreationCompteComponent {
   })
 
   onSubmit() {
+    if(this.registerForm.invalid){
+      return;
+    }
     this.authService.enregistrer(this.registerForm.value).subscribe({
       next:(response) => {
-        console.log("sign up success", response)
+        console.log("Enregistré avec succès", response)
       }
     })
     this.registerForm.reset();
